@@ -1,14 +1,9 @@
 # include <stdio.h>
 
 /**
+ * main -Entry point
  *
- * main - print the string in the put function
- *
- * Description; using the main function
- *
- * This function prints the sizes of various types
- *
- * Returns 0
+ * Returns: 0 always (success)
  */
 
 int main(void)
@@ -35,8 +30,4 @@ int main(void)
 	printf("size of a float: %d byte(s)\n", sizeof(f));
 
 	return (0);
-
-
-
-
 }

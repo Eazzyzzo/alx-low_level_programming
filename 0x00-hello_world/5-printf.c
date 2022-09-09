@@ -1,16 +1,10 @@
 # include <stdio.h>
 
 /**
+ * main -Entry point
  *
- * main - print the string in the put funtion
- *
- * Description: using the main function
- *
- * This program prints: "with proper grammar, but the outcome is a piece of art",
- *
- * Returns 0
+ * Returns: 0 Always (success) 
  */
-
 int main(void)
 
 {

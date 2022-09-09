@@ -13,7 +13,7 @@ int main(void)
 {
 	/*string initialization*/
 
-	char put[] = "Programming is like building a multilingual puzzle";
+	char put[] = "\"Programming is like building a multilingual puzzle";
 
 	/*writing 'put' to stdout */
 

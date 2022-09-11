@@ -22,7 +22,7 @@ int main(void)
 	{
 		putchar(alpha);
 	}
-	
+
 	{
 		putchar('\n');
 	}

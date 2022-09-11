@@ -18,7 +18,7 @@ int main(void)
 		putchar(rv);
 	}
 	{
-		putchar('\n')
+		putchar('\n');
 	}
 
 return (0);

@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 
+#include <time.h>
 /**
  * main -Entry point
  *
@@ -9,37 +10,37 @@
  *
  */
 
-int main()
+int main(void)
 
 {
-	int n1 = 0, n2;
+	int n;
 
-	while (n1 <= 9)
+	for (n = 0; n < 90; n++)
 
 	{
-		if (n1 != n2 && n1 < n2)
 
 		{
-			putchar(n1 + 48);
-		
-			putchar(n2 + 48);
+			putchar((n / 10) + '0');
+
+			putchar((n % 10) + '0');
+
+
+			if (n != 89)
+
+			{
+				putchar(',');
+
+				putchar(' ');
+			}
+
 		}
 
-		if (n1 +n2 != 17)
 
-		{
-			putchar(',');
-
-			putchar(' ');
-
-		}
-
-
-
-	
 	}
-	
 
 
+	putchar('\n');
 }
+
+return (0);
 

@@ -3,7 +3,7 @@
 /**
  * main -Entry point
  *
- * return: 0 always (success)
+ * Return: 0 always (success)
  *
  */
 
@@ -19,6 +19,8 @@ int main(void)
 	}
 
 	if (x != 57)
+
+		continue;
 
 	{
 		putchar(',');

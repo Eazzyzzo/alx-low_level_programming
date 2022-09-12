@@ -20,9 +20,10 @@ int main(void)
 
 	if (x != 57)
 
-		continue;
 
 	{
+		continue;
+
 		putchar(',');
 
 		putchar(' ');

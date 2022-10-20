@@ -1,5 +1,5 @@
 
-bal 	main
+	global 	main
 
 	extern 	printf
 

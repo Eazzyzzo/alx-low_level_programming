@@ -5,9 +5,9 @@
 /**
  * main - program that prints its name, followed by a new line
  *
- * @argc: argument that counts argument input
+ * @argc: argument count
  *
- * @argv: argument that stores the strings in an array of char* (strings)
+ * @argv: array that stores argument list
  *
  * Return: 0
  */
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 {
 
-	int num_1, num_2, mul;
+	int one, two, product;
 
 
 
@@ -28,13 +28,13 @@ int main(int argc, char *argv[])
 
 	{
 
-		num_1 = atoi(argv[1]);
+		one = atoi(argv[1]);
 
-		num_2 = atoi(argv[2]);
+		two = atoi(argv[2]);
 
-		mul = num_1 * num_2;
+		product = one * two;
 
-		printf("%d\n", mul);
+		printf("%d\n", product);
 
 	}
 

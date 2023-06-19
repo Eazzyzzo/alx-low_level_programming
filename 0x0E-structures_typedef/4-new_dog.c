@@ -1,16 +1,16 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- * new_dog - creates a new dog
+ * new_dog - creates a new structure
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
- * Return: pointer to new dog
+ * Return: pointer to memory address
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int nl, ol, i;
+	unsigned int g, h, t;
 	dog_t *dog;
 
 	if (name == NULL || owner == NULL)
@@ -18,10 +18,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	for (nl = 0; name[nl]; nl++)
+	for (g = 0; name[g]; g++)
 		;
-	nl++;
-	dog->name = malloc(nl * sizeof(char));
+	g++;
+	dog->name = malloc(g * sizeof(char));
 	if (dog->name == NULL)
 
 	{
@@ -29,13 +29,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; i < nl; i++)
-		dog->name[i] = name[i];
+	for (h = 0; h < g; h++)
+		dog->name[h] = name[h];
 	dog->age = age;
-	for (ol = 0; owner[ol]; ol++)
+	for (t = 0; owner[t]; t++)
 		;
-	ol++;
-	dog->owner = malloc(ol * sizeof(char));
+	h++;
+	dog->owner = malloc(h * sizeof(char));
 	if (dog->owner == NULL)
 
 	{
@@ -44,7 +44,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; i < ol; i++)
-		dog->owner[i] = owner[i];
+	for (t = 0; t < h; t++)
+		dog->owner[t] = owner[t];
 	return (dog);
 }

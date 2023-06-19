@@ -3,9 +3,9 @@
 #include "dog.h"
 
 /**
- * free_dog - frees dogs
+ * free_dog - frees the memory
  *
- * @d: pointer to dog to free
+ * @d: pointer to struct memory
  *
  * Return: void
  */

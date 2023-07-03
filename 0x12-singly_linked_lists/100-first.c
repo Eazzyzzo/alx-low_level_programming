@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void first(void) __attribute__ ((constructor));
+void display(void) __attribute__ ((constructor));
 
 /**
- * first - prints something before main
+ * display - prints something before main
  *
  * Return: void
  */
 
-void first(void)
+void display(void)
 
 {
 

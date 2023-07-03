@@ -1,1 +1,1 @@
-This is my first project in linked lists
+linked lists project

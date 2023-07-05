@@ -5,7 +5,7 @@
 /**
  * add_nodeint - adds a new node at the beginning of a listint_t list.
  *
- * @head: douuble pointer to the beginning of a listint_t list
+ * @head: double pointer to the beginning of a listint_t list
  *
  * @n: integer to add to the list
  *
@@ -16,26 +16,28 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 {
 
-	listint_t *new;
+	listint_t *newnode;
 
 
 
 	if (head == NULL)
-
+	{
 		return (NULL);
+	}
 
-	new = malloc(sizeof(listint_t));
+	newnode = (listint_t) malloc(sizeof(listint_t));
 
-	if (new == NULL)
-
+	if (newnode == NULL)
+	{
 		return (NULL);
+	}
 
-	new->n = n;
+	newnode->n = n;
 
-	new->next = *head;
+	newnode->next = *head;
 
-	*head = new;
+	*head = newnode;
 
-	return (new);
+	return (newnode);
 
 }

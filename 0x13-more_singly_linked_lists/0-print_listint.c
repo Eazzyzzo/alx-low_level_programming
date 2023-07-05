@@ -8,31 +8,17 @@
  * Return: the number of nodes
  */
 
-size_t print_listint(const listint_t *h)
-
+size_t print_listint(const listint_t *h
+		)
 {
 	size_t count = 0;
 
-	listint_t *curr;
-
-	if (h == NULL)
+	while (h->next != NULL)
 	{
-		printf("list is empty \n");
-	}
-
-	curr = h;
-
-	while (curr->next != NULL)
-	{
-		printf("%d", curr->n);
-
-		curr = curr->next;
+		printf("%d\n", h->n);
 		count++;
-
-
+		h = h->next;
 	}
 
 	return (count);
 }
-
-

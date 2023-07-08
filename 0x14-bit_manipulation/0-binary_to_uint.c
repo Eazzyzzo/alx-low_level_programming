@@ -3,7 +3,7 @@
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
  * @b: pointer to a string containing a binary number
- * Return: unsigned int with decimal value of binsry number, or 0 if error
+ * Return: unsigned int with decimal value of binary number, or 0 if error
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -12,11 +12,11 @@ unsigned int binary_to_uint(const char *b)
 
 	int i;
 
-	unsigned int num;
+	unsigned int number;
 
 
 
-	num = 0;
+	number = 0;
 
 	if (!b)
 
@@ -36,14 +36,14 @@ unsigned int binary_to_uint(const char *b)
 
 	{
 
-		num <<= 1;
+		number <<= 1;
 
 		if (b[i] == '1')
 
-			num += 1;
+			number = number + 1;
 
 	}
 
-	return (num);
+	return (number);
 
 }

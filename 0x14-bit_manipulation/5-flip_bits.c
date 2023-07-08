@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * flip_bits - number of different bits between two numbers
@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 {
 
-	unsigned long int diff, check;
+	unsigned long int diff, search;
 
 	unsigned int count, i;
 
@@ -20,7 +20,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	count = 0;
 
-	check = 1;
+	search = 1;
 
 	diff = n ^ m;
 
@@ -28,11 +28,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	{
 
-		if (check == (diff & check))
+		if (search == (diff & check))
 
 			count++;
 
-		check <<= 1;
+		search <<= 1;
 
 	}
 

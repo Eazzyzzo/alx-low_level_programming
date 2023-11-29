@@ -9,48 +9,25 @@
  */
 
 int (*get_op_func(char *s))(int, int)
-
 {
-
-	opt_t ops[] = {
-
-		{"+", op_add},
-
-		{"-", op_sub},
-
-		{"*", op_mul},
-
-		{"/", op_div},
-
-		{"%", op_mod},
-
-		{NULL, NULL}
-
+		op_t ops[] = {
+			{"+", op_add},
+			{"-", op_sub},
+			{"*", op_mul},
+			{"/", op_div},
+			{"%", op_mod},
+			{NULL, NULL}
 	};
-
 	int i;
 
-
-
-	i = 0;
-
-
-
-	while (ops[i].op)
-
+	for (i = 0; ops[i].op != NULL; i++)
 	{
-
-		if (strcmp(ops[i].op, s) == 0)
-
+		if (*(ops[i].op) == *s && s[1] == '\0')
+		{
+			/*s[1]=='\0 ensure that operator is a single character*/
 			return (ops[i].f);
-
-		i++;
-
+		}
 	}
-
-
-
-	return (NULL);
-
+	printf(" error \n");
+	exit(99);
 }
-

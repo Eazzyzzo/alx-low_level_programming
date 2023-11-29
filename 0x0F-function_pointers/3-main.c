@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf(" argument error \n");
+		printf(" Error \n");
 		exit(98);
 	}
 
@@ -24,6 +24,6 @@ int main(int argc, char *argv[])
 
 	funcptr = get_op_func(argv[2]);
 	result = funcptr(num1, num2);
-	printf("result is; %i \n", result);
+	printf(" %i \n", result);
 	return (0);
 }

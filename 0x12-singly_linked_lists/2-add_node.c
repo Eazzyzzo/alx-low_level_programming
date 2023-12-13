@@ -12,19 +12,25 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *newnode;
-	unsigned int len = 0;
+	unsigned int i;
+	/*we are returning a pointer to an address that is **head*/
 
-	while (str[len])
-		len++;
-
-	new = malloc(sizeof(list_t));
-	if (!newnode)
+	newnode = malloc(sizeof(list_t));
+	if (newnode == NULL || str == NULL)
 		return (NULL);
-
 	newnode->str = strdup(str);
-	newnode->len = len;
-	newnode->next = (*head);
-	(*head) = newnode;
+	if (newnode->str == NULL)
+	{
+		free(newnode);
+		return (NULL);
+	}
 
+	for (i = 0; str[i] != '\0'; i++)
+		{
+
+		}
+	newnode->len = i;
+	newnode->next = *head;
+	*head = newnode;
 	return (*head);
 }
